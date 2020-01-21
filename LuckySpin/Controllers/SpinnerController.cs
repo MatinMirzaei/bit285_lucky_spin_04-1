@@ -32,6 +32,8 @@ namespace LuckySpin.Controllers
         [HttpGet]
         public IActionResult SpinIt(Player player) //TODO: Prepare this method to receive a Player
         {
+            ViewBag.FirstName = player.FirstName;
+            ViewBag.LuckNumber = player.LuckNumber;
             //Load up a Spin object with data
             Spin spin = new Spin();
             spin.Luck = player.LuckNumber; //TODO: Edit this to assign Player's lucky number to spin.Luck
