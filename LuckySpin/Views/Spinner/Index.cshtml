@@ -1,12 +1,15 @@
 ﻿@{
     Layout = "_Layout";
 }
+
+@model LuckySpin.Models.Player
+
 <h2>Pick your Lucky Number</h2>
 <form action="/Spinner/Index" method="post">
     <fieldset>
-        <label><input placeholder=" Your First Name" /></label>
+        <label><input name="FirstName" placeholder=" Your First Name" /></label>
         <label>
-            <select>
+            <select name="LuckNumber">
                 <option selected disabled>Luck Number</option>
                 <option>1</option>
                 <option>2</option>
